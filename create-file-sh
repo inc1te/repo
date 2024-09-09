@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Define the filename and size
+FILENAME="largefile.bin"
+SIZE="2G"
+
+# Create the file filled with random data
+dd if=/dev/urandom of=$FILENAME bs=1 count=0 seek=$SIZE
+
+echo "Created $FILENAME with $SIZE of data."
